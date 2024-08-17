@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+			<div class="logo">MyLogo</div>
+			<nav class="nav-links">
+				<a href="index.html">Home</a>
+				<a href="products.html">Products</a>
+				<a href="contact.html">Contact</a>
+				<a href="cart.html">Cart</a>
+			</nav>
+			<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+		</header>
+
+        <div class="container">
+    <div class="row">
+        <div class="cart-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="img/product-1.jpg" alt="Product 1"> Colorful Stylish Shirt</td>
+                        <td>$150</td>
+                        <td>
+                            <div class="quantity">
+                                <button class="btn-minus">-</button>
+                                <input type="text" value="1">
+                                <button class="btn-plus">+</button>
+                            </div>
+                        </td>
+                        <td>$150</td>
+                        <td><button class="btn-remove">X</button></td>
+                    </tr>
+                    <!-- Repeat for other products -->
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-summary">
+            <form class="coupon-form">
+                <input type="text" placeholder="Coupon Code">
+                <button type="submit">Apply Coupon</button>
+            </form>
+            <div class="summary-card">
+                <h4>Cart Summary</h4>
+                <div class="summary-details">
+                    <p>Subtotal: <span>$150</span></p>
+                    <p>Shipping: <span>$10</span></p>
+                </div>
+                <div class="total">
+                    <h5>Total: <span>$160</span></h5>
+                </div>
+                <button class="checkout-btn">Proceed To Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    		<footer class="footer">
+			<div class="footer-container">
+				<!-- About Section -->
+				<div class="footer-section about">
+					<h3>About Us</h3>
+					<p>
+						At [Your Store Name], we offer high-quality products curated for
+						your everyday needs. With a focus on convenience, style, and
+						reliability, we bring you the best items from trusted brands. Enjoy
+						seamless shopping, fast delivery, and exceptional customer service.
+						Welcome to [Your Store Name]—where quality meets convenience.
+					</p>
+				</div>
+
+				<!-- Quick Links Section -->
+				<div class="footer-section links">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Contact Information Section -->
+				<div class="footer-section contact">
+					<h3>Contact Information</h3>
+					<ul>
+						<li><strong>Address:</strong> ikeja,Nigeria</li>
+						<li><strong>Phone:</strong> 0800 000 0000</li>
+						<li><strong>Email:</strong> contact@yourdomain.com</li>
+					</ul>
+				</div>
+
+				<!-- Social Media Section -->
+				<div class="footer-section social">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a href="#" class="social-icon">Facebook</a>
+						<a href="#" class="social-icon">Twitter</a>
+						<a href="#" class="social-icon">Instagram</a>
+						<a href="#" class="social-icon">Youtube</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<p>&copy; 2024 Your Company. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+</body>
+</html>

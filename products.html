@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Products - ShopZone</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">MyLogo</div>
+			<nav class="nav-links">
+				<a href="index.html">Home</a>
+				<a href="products.html">Products</a>
+				<a href="contact.html">Contact</a>
+				<a href="cart.html">Cart</a>
+			</nav>
+			<div class="menu-toggle" id="menu-toggle">&#9776;</div>
+		</header>
+
+		<section class="product-listing">
+			<div class="container">
+				<h2>All Products</h2>
+				<input
+					type="text"
+					id="search"
+					placeholder="Search products..."
+					onkeyup="filterProducts()"
+				/>
+				<div class="product-grid" id="product-list">
+					<!-- Products will be dynamically loaded here -->
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer-container">
+				<!-- About Section -->
+				<div class="footer-section about">
+					<h3>About Us</h3>
+					<p>
+						At [Your Store Name], we offer high-quality products curated for
+						your everyday needs. With a focus on convenience, style, and
+						reliability, we bring you the best items from trusted brands. Enjoy
+						seamless shopping, fast delivery, and exceptional customer service.
+						Welcome to [Your Store Name]—where quality meets convenience.
+					</p>
+				</div>
+
+				<!-- Quick Links Section -->
+				<div class="footer-section links">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Contact Information Section -->
+				<div class="footer-section contact">
+					<h3>Contact Information</h3>
+					<ul>
+						<li><strong>Address:</strong> ikeja,Nigeria</li>
+						<li><strong>Phone:</strong> 0800 000 0000</li>
+						<li><strong>Email:</strong> contact@yourdomain.com</li>
+					</ul>
+				</div>
+
+				<!-- Social Media Section -->
+				<div class="footer-section social">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a href="#" class="social-icon">Facebook</a>
+						<a href="#" class="social-icon">Twitter</a>
+						<a href="#" class="social-icon">Instagram</a>
+						<a href="#" class="social-icon">Youtube</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<p>&copy; 2024 Your Company. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script>
+			const products = [
+				{
+					name: "Senwei 4.5KVA Manul Start Generator SV5200. -Low Noise Level",
+					image: "img/1.jpg",
+					price: 270000,
+					rating: 4,
+				},
+				{
+					name: "Men's Casual Athletic Running Shoes Outdoor Jogging Sports Tennis Sneakers Gym-white",
+					image: "img/1 (1).jpg",
+					price: 9600,
+					rating: 5,
+				},
+				{
+					image: "img/1 (2).jpg",
+					name: "Trousers Men's 2-in-1 Short Sleeved T-shirt And Pants Set - Black",
+					price: 8963,
+					rating: 3,
+				},
+				{
+					name: "Authentic Diamond Iced Sophisticated Silver Steel Wristwatch + Necklace/Bracelet",
+					image: "img/1 (3).jpg",
+					price: 90000,
+					rating: 4,
+				},
+				{
+					name: "Rose Design Shape Umbrella",
+					image: "img/1 (4).jpg",
+					price: 6045,
+					rating: 2,
+				},
+				{
+					name: "Reception/Airport Waiting Chair(3 Seater)",
+					image: "img/1 (5).jpg",
+					price: 170000,
+					rating: 4,
+				},
+				{
+					name: "Binnys Ladies Removable Strapless Bra (C Cup Only)",
+					image: "img/1 (6).jpg",
+					price: 7500,
+					rating: 5,
+				},
+				{
+					name: "Men's Cotton Boxer Briefs Four-Pack-Multicolort",
+					image: "img/1 (7).jpg",
+					price: 7151,
+					rating: 3,
+				},
+				{
+					name: "Senwei 4.5KVA Manul Start Generator SV5200. -Low Noise Level",
+					image: "img/1.jpg",
+					price: 270000,
+					rating: 4,
+				},
+				{
+					name: "Men's Casual Athletic Running Shoes Outdoor Jogging Sports Tennis Sneakers Gym-white",
+					image: "img/1 (1).jpg",
+					price: 9600,
+					rating: 5,
+				},
+				{
+					image: "img/1 (2).jpg",
+					name: "Trousers Men's 2-in-1 Short Sleeved T-shirt And Pants Set - Black",
+					price: 8963,
+					rating: 3,
+				},
+				{
+					name: "Authentic Diamond Iced Sophisticated Silver Steel Wristwatch + Necklace/Bracelet",
+					image: "img/1 (3).jpg",
+					price: 90000,
+					rating: 4,
+				},
+				{
+					name: "Rose Design Shape Umbrella",
+					image: "img/1 (4).jpg",
+					price: 6045,
+					rating: 2,
+				},
+				{
+					name: "Reception/Airport Waiting Chair(3 Seater)",
+					image: "img/1 (5).jpg",
+					price: 170000,
+					rating: 4,
+				},
+				{
+					name: "Binnys Ladies Removable Strapless Bra (C Cup Only)",
+					image: "img/1 (6).jpg",
+					price: 7500,
+					rating: 5,
+				},
+				{
+					name: "Men's Cotton Boxer Briefs Four-Pack-Multicolort",
+					image: "img/1 (7).jpg",
+					price: 7151,
+					rating: 3,
+				},
+				{
+					name: "Senwei 4.5KVA Manul Start Generator SV5200. -Low Noise Level",
+					image: "img/1.jpg",
+					price: 270000,
+					rating: 4,
+				},
+				{
+					name: "Men's Casual Athletic Running Shoes Outdoor Jogging Sports Tennis Sneakers Gym-white",
+					image: "img/1 (1).jpg",
+					price: 9600,
+					rating: 5,
+				},
+				{
+					image: "img/1 (2).jpg",
+					name: "Trousers Men's 2-in-1 Short Sleeved T-shirt And Pants Set - Black",
+					price: 8963,
+					rating: 3,
+				},
+				{
+					name: "Authentic Diamond Iced Sophisticated Silver Steel Wristwatch + Necklace/Bracelet",
+					image: "img/1 (3).jpg",
+					price: 90000,
+					rating: 4,
+				},
+				{
+					name: "Rose Design Shape Umbrella",
+					image: "img/1 (4).jpg",
+					price: 6045,
+					rating: 2,
+				},
+				{
+					name: "Reception/Airport Waiting Chair(3 Seater)",
+					image: "img/1 (5).jpg",
+					price: 170000,
+					rating: 4,
+				},
+				{
+					name: "Binnys Ladies Removable Strapless Bra (C Cup Only)",
+					image: "img/1 (6).jpg",
+					price: 7500,
+					rating: 5,
+				},
+				{
+					name: "Men's Cotton Boxer Briefs Four-Pack-Multicolort",
+					image: "img/1 (7).jpg",
+					price: 7151,
+					rating: 3,
+				},
+			];
+
+			function loadProducts() {
+				const productList = document.getElementById("product-list");
+				productList.innerHTML = "";
+
+				products.forEach((product) => {
+					const productCard = `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-name">${product.name}</div>
+        <div class="product-price">₦${product.price.toLocaleString()}</div>
+        <div class="product-rating">${getRatingStars(product.rating)}</div>
+        <button class="add-to-cart" onclick="addToCart('${product.name}', ${
+						product.price
+					})">Add to Cart</button>
+      </div>
+    `;
+					productList.innerHTML += productCard;
+				});
+			}
+
+			function getRatingStars(rating) {
+				let stars = "";
+				for (let i = 0; i < 5; i++) {
+					stars += i < rating ? "★" : "☆";
+				}
+				return `<div class="rating-stars">${stars}</div>`;
+			}
+
+			function filterProducts() {
+				const searchInput = document
+					.getElementById("search")
+					.value.toLowerCase();
+				const filteredProducts = products.filter((product) =>
+					product.name.toLowerCase().includes(searchInput)
+				);
+
+				const productList = document.getElementById("product-list");
+				productList.innerHTML = "";
+
+				filteredProducts.forEach((product) => {
+					const productCard = `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-name">${product.name}</div>
+        <div class="product-price">₦${product.price.toLocaleString()}</div>
+        <div class="product-rating">${getRatingStars(product.rating)}</div>
+        <button class="add-to-cart" onclick="addToCart('${product.name}', ${
+						product.price
+					})">Add to Cart</button>
+      </div>
+    `;
+					productList.innerHTML += productCard;
+				});
+			}
+
+			document.addEventListener("DOMContentLoaded", loadProducts);
+		</script>
+
+		<script src="script.js"></script>
+	</body>
+</html>
